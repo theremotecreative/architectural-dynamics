@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
-    title: `Architect Portfolio`,
-    description: `This is a demo website using Gatsby.js, a Wordpress CMS, and Netlify deployment`,
+    title: `Architectural Dynamics`,
+    description: `James Vanderheyden | Portfolio`,
     author: `@theremotecreative`,
   },
   plugins: [
@@ -38,7 +38,7 @@ module.exports = {
       resolve: "gatsby-source-wordpress",
       options: {
         // Source Website from subdomain
-        baseUrl: "architect-portfolio.theremotecreative.com",
+        baseUrl: "architectural-dynamics.theremotecreative.com",
         protocol: "http",
         hostingWPCOM: false,
         // Using advanced custom fields
@@ -63,8 +63,6 @@ module.exports = {
           "**/tags",
           "**/taxonomies",
           "**/users",
-          "**/*/*/menus", // <== Menu api endpoint
-          "**/*/*/menu-locations", // <== Menu api endpoint
         ],
         excludedRoutes: [],
         keepMediaSizes: false,
