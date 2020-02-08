@@ -1,0 +1,131 @@
+/* contact page css */
+
+.contact-box {
+    display: flex;
+}
+
+.contact-left,
+.contact-right {
+    width: 50%;
+}
+
+.contact-right {
+    padding: 0 3rem;
+}
+
+.contact-info {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.contact-card {
+    display: flex;
+    width: 33%;
+}
+
+.contact-card h3 {
+    font-size: 1.1rem;
+    font-weight: 400;
+    padding-left: 10px;
+}
+
+.contact-card svg {
+    top: 3px;
+    position: relative;
+}
+
+.contact-form label {
+    display: flex;
+    flex-wrap: wrap;
+    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+    width: 100%;
+    margin-top: 3px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+.contact-form button[type="submit"] {
+    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+    background-color: #aaa;
+    border: 1px solid #aaa;
+    border-radius: 4px;
+    color: #fff;
+    padding: 5px 30px;
+    transition-duration: .3s;
+}
+
+.contact-form button[type="submit"]:hover {
+    cursor: pointer;
+    background-color: #999;
+    border-color: #999;
+}
+
+.map-icon {
+    height: 40px;
+    width: 40px;
+    font-size: 36px;
+    color: #000;
+    position: relative;
+}
+
+.map-icon svg {
+    position: relative;
+    top: -20px;
+    left: -20px;
+}
+
+@media (max-width:1300px) {
+    .contact-card {
+        width: 50%;
+    }
+}
+
+@media (max-width:1040px) {
+    .contact-card {
+        width: 100%;
+    }
+}
+
+@media (max-width:780px) {
+    .contact-box {
+        flex-wrap: wrap;
+    }
+    .contact-left,
+    .contact-right {
+        width: 100%;
+    }
+    .contact-right {
+        order: 1;
+        padding-right: 0;
+        padding-left: 0;
+    }
+    .contact-left {
+        order: 2;
+    }
+    .contact-card {
+        width: 33%;
+    }
+}
+
+@media (max-width:650px) {
+    .contact-card {
+        width: 50%;
+    }
+}
+
+@media (max-width:500px) {
+    .contact-right h1 {
+        text-align: center;
+    }
+    .contact-card {
+        width: 100%;
+        justify-content: center;
+    }
+}

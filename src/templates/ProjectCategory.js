@@ -1,0 +1,119 @@
+import React from 'react'
+import { graphql, Link } from 'gatsby'
+import styled from 'styled-components'
+import Img from "gatsby-image"
+import Layout from '../components/layout'
+import WideTemplate from "../components/WideTemplate"
+import SEO from "../components/seo"
+
+const ProjectCategoryTemplate = ({ data }) => (
+			<Layout className="portfolio-page">
+        <SEO title={`Project Category: ${data.wordpressCategory.name}`} keywords={[`Architecture`, `Grid`, `Portfolio`]} />
+        <WideTemplate>
+        <Masonry>
+        {data.allWordpressWpProject.edges.map(post => (
+            <MasonryItem>
+              <Link to={`/project/${post.node.slug}`} className="masonry-item-link" >
+                <MasonryItemImg sizes={post.node.featured_media.localFile.childImageSharp.sizes} alt={post.node.title} />
+                <TextPanel>
+                  <TextCell>
+                    <TextTitle>
+                      {post.node.title}
+                    </TextTitle>
+                  </TextCell>
+                </TextPanel>
+              </Link>
+            </MasonryItem>
+          ))}
+        </Masonry>
+        </WideTemplate>
+			</Layout>
+)
+
+
+const Masonry = styled.div`
+  column-count: 3;
+  column-gap: 1em;
+  transition-duration: .3s;
+  @media (max-width:1000px) {
+    column-count: 2;
+  }
+  @media (max-width:500px) {
+    column-count: 1;
+  }
+`
+
+const MasonryItemImg = styled(Img)`
+  transition-duration: .3s;
+`
+
+const TextPanel = styled.div`
+  position: absolute;
+  display: flex;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  align-items: center;
+  margin: 0 auto;
+`
+
+const TextCell = styled.div`
+  width: 100%;
+  transition: all .3s;
+  opacity: 0;
+  transform: scale(.7)
+`
+
+const TextTitle = styled.h3`
+  color: #fff;
+  text-align:center;
+`
+
+const MasonryItem = styled.div`
+  position: relative;
+  background-color: #000;
+  display: inline-block;
+  margin: 0 0 1em;
+  width: 100%;
+  transition-duration:.3s;
+  &:hover {
+    ${MasonryItemImg} {
+      opacity: .2;
+    }
+    ${TextCell} {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+`
+
+
+export default ProjectCategoryTemplate;
+
+export const query = graphql`
+	query($id: Int!) {
+        wordpressCategory(wordpress_id: { eq: $id }) {
+            wordpress_id
+            name
+            slug
+        }
+        allWordpressWpProject(filter: {categories: {elemMatch: {wordpress_id: { eq: $id }}}}) {
+            edges {
+                node {
+                  title
+                  slug
+                  excerpt
+                  featured_media {
+                    localFile {
+                      childImageSharp {
+                        sizes(maxWidth: 1200) {
+                            ...GatsbyImageSharpSizes
+                          }
+                      }
+                    }
+                  }
+                }
+              }
+        }
+	}
+`

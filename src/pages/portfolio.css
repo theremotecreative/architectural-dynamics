@@ -1,0 +1,75 @@
+/* Masonry layout CSS */
+
+.masonry {
+    column-count: 3;
+    column-gap: 1em;
+    transition-duration: .3s;
+}
+
+.masonry-item {
+    position: relative;
+    background-color: #000;
+    display: inline-block;
+    margin: 0 0 1em;
+    width: 100%;
+    transition-duration:.3s;
+}
+
+.masonry-item-img {
+    transition-duration: .3s;
+}
+
+.masonry-item .text-panel {
+    position: absolute;
+    display: flex;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.masonry-item .text-cell {
+    width: 100%;
+    transition: all .3s;
+    opacity: 0;
+    transform: scale(.7)
+}
+
+.masonry-item .text-cell h3 {
+    color: #fff;
+    text-align:center;
+}
+
+.masonry-item:hover .masonry-item-img {
+    opacity: .2;
+}
+
+.masonry-item:hover .text-cell {
+    opacity: 1;
+    transform: scale(1);
+}
+
+/* project gallery */
+
+.project-gallery .text-cell {
+    text-align: center;
+    color: #fff;
+    font-size: 1.5rem;
+}
+
+.project-gallery .masonry-item:hover {
+    cursor: pointer;
+}
+
+@media (max-width:1000px) {
+    .masonry {
+        column-count: 2;
+    }
+}
+
+@media (max-width:500px) {
+    .masonry {
+        column-count: 1;
+    }
+}

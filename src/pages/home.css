@@ -1,0 +1,14 @@
+/* homepage css */
+
+.home-hero {
+    height: 100vh;
+}
+
+.home-hero-img {
+    display: none;
+    height:100vh;
+}
+
+.home-hero-img:first-child {
+    display: block;
+}
