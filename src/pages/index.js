@@ -11,9 +11,6 @@ const IndexPage = ({ data }) => (
     <SEO title="Home" />
     <PageTransition>
     <HomeHero>
-    {data.allWordpressWpHomeSlide.edges.map(post => (
-        <HomeHeroImg sizes={post.node.featured_media.localFile.childImageSharp.sizes} alt={post.node.title} />
-      ))}
     </HomeHero>
     </PageTransition>
   </Layout>
@@ -39,15 +36,6 @@ export const query = graphql`
       edges {
         node {
           content
-          featured_media {
-            localFile {
-              childImageSharp {
-                sizes(maxWidth: 1200) {
-                    ...GatsbyImageSharpSizes
-                  }
-              }
-            }
-          }
         }
       }
     }
