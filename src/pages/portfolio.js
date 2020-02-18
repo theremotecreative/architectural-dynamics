@@ -20,6 +20,9 @@ const PortfolioPage = ({ data }) => (
                 <TextTitle>
                   {post.node.title}
                 </TextTitle>
+                <TextLocation>
+                  {post.node.acf.project_location}
+                </TextLocation>
               </TextCell>
             </TextPanel>
           </Link>
@@ -39,6 +42,9 @@ const Masonry = styled.div`
 `
 
 const MasonryItemImg = styled(Img)`
+  object-fit: cover;
+  object-position: center;
+  height: 350px;
   transition-duration: .3s;
 `
 
@@ -61,18 +67,28 @@ const TextCell = styled.div`
 
 const TextTitle = styled.h3`
   color: #fff;
-  text-align:center;
+  text-align: center;
+  margin-bottom: 5px;
+`
+
+const TextLocation = styled.p`
+  color: #fff;
+  text-align: center;
+  font-family: montserrat;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 2px;
+  margin-bottom: 0px;
 `
 
 const MasonryItem = styled.div`
   position: relative;
-  width: 33%;
-  max-height: 400px;
-  height: 100%;
+  width: calc(33.3% - .54375rem);
+  height: 350px;
   background-color: #000;
   display: inline-block;
-  padding: 20px;
-  width: 100%;
+  padding: 0px;
+  margin-bottom: 1.0875rem;
   transition-duration:.3s;
   &:hover {
     ${MasonryItemImg} {
@@ -83,11 +99,35 @@ const MasonryItem = styled.div`
       transform: scale(1);
     }
   }
-  @media (max-width:1000px) {
-    column-count: 2;
+  @media (max-width:1300px) {
+    width: calc(50% - .54375rem);
   }
-  @media (max-width:500px) {
-    column-count: 1;
+  @media (max-width:800px) {
+    width: 100%;
+    margin-bottom: 1.0875rem;
+    ${TextPanel} {
+      max-height: 100px;
+      max-width: 240px;
+      bottom: 1.0875rem;
+      top: auto;
+      left: 1.0875rem;
+      background-color: rgba(0,0,0,.8);
+    }
+    ${TextCell} {
+      opacity: 1;
+      transform: scale(1);
+    }
+    &:hover {
+      ${MasonryItemImg} {
+        opacity: 1;
+      }
+    }
+  }
+  @media (max-width:400px) {
+    ${TextPanel} {
+      left: -1.0875rem;
+      background-color: #111;
+    }
   }
 `
 
@@ -101,10 +141,13 @@ export const query = graphql`
           title
           slug
           excerpt
+          acf {
+            project_location
+          }
           featured_media {
             localFile {
               childImageSharp {
-                sizes(maxWidth: 1200) {
+                sizes(maxWidth: 800) {
                     ...GatsbyImageSharpSizes
                     src
                   }
