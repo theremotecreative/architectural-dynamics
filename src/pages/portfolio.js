@@ -31,15 +31,11 @@ const PortfolioPage = ({ data }) => (
 )
 
 const Masonry = styled.div`
-  column-count: 3;
-  column-gap: 1em;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
   transition-duration: .3s;
-  @media (max-width:1000px) {
-    column-count: 2;
-  }
-  @media (max-width:500px) {
-    column-count: 1;
-  }
 `
 
 const MasonryItemImg = styled(Img)`
@@ -70,9 +66,12 @@ const TextTitle = styled.h3`
 
 const MasonryItem = styled.div`
   position: relative;
+  width: 33%;
+  max-height: 400px;
+  height: 100%;
   background-color: #000;
   display: inline-block;
-  margin: 0 0 1em;
+  padding: 20px;
   width: 100%;
   transition-duration:.3s;
   &:hover {
@@ -83,6 +82,12 @@ const MasonryItem = styled.div`
       opacity: 1;
       transform: scale(1);
     }
+  }
+  @media (max-width:1000px) {
+    column-count: 2;
+  }
+  @media (max-width:500px) {
+    column-count: 1;
   }
 `
 
