@@ -32,6 +32,11 @@ const MainLogo = () => {
 const MainLogoLink = styled(Link)`
   color: #000;
   text-decoration: none;
+  width: 32%;
+  height: 136px;
+  display: flex;
+  align-items: center;
+  padding-left: 20px;
   @media(max-width:800px) {
     color: #fff;
   }

@@ -25,6 +25,10 @@ const Layout = ({ className, children }) => {
         <FixedMenu>
           <SidebarMenu></SidebarMenu>
         </FixedMenu>
+        <PageInfo>
+          [page title]
+          [page description]
+        </PageInfo>
       </MainSidebar>
       <MainContent>
         {children}
@@ -62,10 +66,20 @@ const SidebarMenu = styled(MainMenu)`
 
 const FixedMenu = styled.div`
   width: 330px;
-  background-color:#ccc;
+  background-color: #ccc;
   border-bottom: 10px solid #fff;
-  padding-top: 100px;
-  padding-bottom: 100px;
+  height: 230px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`
+
+const PageInfo = styled.div`
+  height: calc(100vh - 386px);
+  width: 330px;
+  background-color: #999;
+  padding: 20px;
+  border-bottom: 10px solid #fff;
 `
 
 export default Layout
