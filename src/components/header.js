@@ -22,10 +22,9 @@ class Header extends Component {
       headerName += ' mobileOpen';
     }
     return (
-      <header style={{ width: '100%', zIndex: '100', marginBottom: `1.45rem`, }} className={headerName}>
+      <header style={{ width: '100%', zIndex: '100', position: 'fixed', height: '156px', border: '10px solid #fff', backgroundColor: '#ddd', }} className={headerName}>
         <div style={{ margin: `0 auto`, padding: `1.45rem 1.0875rem`, display: `flex`, justifyContent: `space-between`, alignItems: `center`, }} >
           <MainLogo></MainLogo>
-          <MainMenu></MainMenu>
           <button onClick={() => this.toggleMenu()} className="mobileIcon">
             <div className="hamburger1"></div>
             <div className="hamburger2"></div>

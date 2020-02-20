@@ -6,7 +6,9 @@ const WideTemplate = ({ children }) => {
   return (
     <div className="wide-layout" style={{ 
       margin: '0px auto', 
-      padding: `1.45rem 1.0875rem` 
+      padding: `0`,
+      border: '10px solid #fff',
+      borderLeft: 'none'
     }}>
       <main>
         <PageTransition>

@@ -60,6 +60,7 @@ const TextPanel = styled.div`
 
 const TextCell = styled.div`
   width: 100%;
+  padding: 0 20px;
   transition: all .3s;
   opacity: 0;
   transform: scale(.7)
@@ -83,12 +84,12 @@ const TextLocation = styled.p`
 
 const MasonryItem = styled.div`
   position: relative;
-  width: calc(33.3% - .54375rem);
+  width: calc(33.3% - 5px);
   height: 350px;
   background-color: #000;
   display: inline-block;
   padding: 0px;
-  margin-bottom: 1.0875rem;
+  margin-bottom: 10px;
   transition-duration:.3s;
   &:hover {
     ${MasonryItemImg} {
@@ -100,7 +101,7 @@ const MasonryItem = styled.div`
     }
   }
   @media (max-width:1300px) {
-    width: calc(50% - .54375rem);
+    width: calc(50% - 5px);
   }
   @media (max-width:800px) {
     width: 100%;
