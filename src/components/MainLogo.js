@@ -1,16 +1,33 @@
-import { Link } from "gatsby"
 import React from "react"
+import { Link, useStaticQuery, graphql } from "gatsby"
+import Img from "gatsby-image"
 import styled from 'styled-components'
 
-const MainLogo = () => (
-        <h1 className="mainLogo">
-            <MainLogoLink 
-            to="/"
-            >
-                <NeedLogo>[Need Logo Here]</NeedLogo>
-            </MainLogoLink>
-        </h1>
+const MainLogo = () => {
+
+  const data = useStaticQuery(graphql`
+    query {
+      placeholderImage: file(relativePath: { eq: "Logo-Black.png" }) {
+        childImageSharp {
+          fluid(maxWidth: 300) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+    }
+  `)
+
+
+ 
+ return (
+  <MainLogoLink 
+      to="/"
+      >
+        <LogoImg fluid={data.placeholderImage.childImageSharp.fluid} />
+  </MainLogoLink>
   )
+
+}
 
 const MainLogoLink = styled(Link)`
   color: #000;
@@ -20,15 +37,9 @@ const MainLogoLink = styled(Link)`
   }
 `
 
-const NeedLogo = styled.p`
-  font-size: 2.25rem;
-  padding: 0;
-  margin: 0;
-  color: inherit;
-  font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,sans-serif;
-  font-weight: 700;
-  text-rendering: optimizeLegibility;
-  line-height: 1.1;
+const LogoImg = styled(Img)`
+  height: 84px;
+  width: 343px;
 `
 
   export default MainLogo
