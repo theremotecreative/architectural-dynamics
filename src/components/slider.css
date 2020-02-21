@@ -1,0 +1,58 @@
+/* fading animations for home page sliders */
+
+@keyframes slide-one {
+  0% {
+    opacity: 0;
+  }
+  7.6% {
+    opacity: 1;
+  }
+  30.7% {
+    opacity: 1;
+  }
+  38.4% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes slide-two {
+    0% {
+        opacity: 0;
+    }
+    30.7% {
+        opacity: 0;
+    }
+    38.4% {
+        opacity: 1;
+    }
+    61.5% {
+        opacity: 1;
+    }
+    69.2% {
+        opacity: 0
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes slide-three {
+    0% {
+        opacity: 0;
+    }
+    61.5% {
+        opacity: 0;
+    }
+    69.2% {
+        opacity: 1;
+    }
+    92.3% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}

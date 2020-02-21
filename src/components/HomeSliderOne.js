@@ -2,6 +2,7 @@ import React from "react"
 import { useStaticQuery, graphql } from 'gatsby'
 import styled from 'styled-components'
 import Img from "gatsby-image"
+import "./slider.css"
 
 const HomeSliderOne = () => {
 
@@ -37,14 +38,24 @@ const HomeSliderOne = () => {
 const HeroSlider = styled.div`
   height: 100%;
   width:100%;
+  position: relative;
 `
 
 const HomeHeroImg = styled(Img)`
-  display: none;
   height: 60vh;
   width: 100%;
-  &:first-child {
-    display: block;
+  position: absolute !important;
+  top: -50px;
+  left: 0;
+  opacity: 0;
+  &:nth-child(1) {
+    animation: slide-one 30s ease-out infinite;
+  }
+  &:nth-child(2) {
+    animation: slide-two 30s ease-out infinite;
+  }
+  &:nth-child(3) {
+    animation: slide-three 30s ease-out infinite;
   }
 `
 

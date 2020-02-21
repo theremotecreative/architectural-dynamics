@@ -37,14 +37,33 @@ const HomeSliderTwo = () => {
 const HeroSlider = styled.div`
   height: 100%;
   width:100%;
+  position: relative;
 `
 
 const HomeHeroImg = styled(Img)`
-  display: none;
   height: 60vh;
   width: 100%;
-  &:first-child {
-    display: block;
+  position: absolute !important;
+  top: -50px;
+  left: 0;
+  opacity: 0;
+  &:nth-child(1) {
+    animation-name: slide-one;
+    animation-duration: 26s;
+    animation-iteration-count: infinite;
+    animation-delay: .5s;
+  }
+  &:nth-child(2) {
+    animation-name: slide-two;
+    animation-duration: 26s;
+    animation-iteration-count: infinite;
+    animation-delay: .5s;
+  }
+  &:nth-child(3) {
+    animation-name: slide-three;
+    animation-duration: 26s;
+    animation-iteration-count: infinite;
+    animation-delay: .5s;
   }
 `
 
