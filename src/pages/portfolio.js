@@ -84,7 +84,7 @@ const TextLocation = styled.p`
 
 const MasonryItem = styled.div`
   position: relative;
-  width: calc(33.3% - 5px);
+  width: calc(50% - 5px);
   height: 350px;
   background-color: #000;
   display: inline-block;
