@@ -1,24 +1,30 @@
 import React from "react"
-import { graphql } from 'gatsby'
 import PageTransition from 'gatsby-plugin-page-transitions'
 import styled from 'styled-components'
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import Img from "gatsby-image"
+import HomeSliderOne from "../components/HomeSliderOne"
+import HomeSliderTwo from "../components/HomeSliderTwo"
+import HomeSliderThree from "../components/HomeSliderThree"
+import HomeSliderFour from "../components/HomeSliderFour"
 
-const IndexPage = ({ data }) => (
+const IndexPage = () => (
   <Layout className="fixed-header">
     <SEO title="Home" />
     <PageTransition>
     <HomeHeroSection>
       <HeroOne>
-        {data.allWordpressWpHomeSlide.edges.map(post => (
-          <HomeHeroImg sizes={post.node.featured_media.localFile.childImageSharp.sizes} alt={post.node.title} />
-        ))}
+        <HomeSliderOne></HomeSliderOne>
       </HeroOne>
-      <HeroTwo></HeroTwo>
-      <HeroThree></HeroThree>
-      <HeroFour></HeroFour>
+      <HeroTwo>
+        <HomeSliderTwo></HomeSliderTwo>
+      </HeroTwo>
+      <HeroThree>
+        <HomeSliderThree></HomeSliderThree>
+      </HeroThree>
+      <HeroFour>
+        <HomeSliderFour></HomeSliderFour>
+      </HeroFour>
     </HomeHeroSection>
     </PageTransition>
   </Layout>
@@ -30,15 +36,6 @@ const HomeHeroSection = styled.div`
   position: relative;
   display: flex;
   flex-wrap: wrap;
-`
-
-const HomeHeroImg = styled(Img)`
-  display: none;
-  height: 60vh;
-  width: 100%;
-  &:first-child {
-    display: block;
-  }
 `
 
 const HeroOne = styled.div`
@@ -80,24 +77,3 @@ const HeroFour = styled.div`
 `
 
 export default IndexPage
-
-export const query = graphql`
-  query {
-    allWordpressWpHomeSlide {
-      edges {
-        node {
-          content
-          featured_media {
-            localFile {
-              childImageSharp {
-                sizes(maxWidth: 1200) {
-                    ...GatsbyImageSharpSizes
-                  }
-              }
-            }
-          }
-        }
-      }
-    }
-  }
-`
