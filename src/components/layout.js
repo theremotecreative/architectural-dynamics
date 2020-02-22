@@ -52,6 +52,9 @@ const MainSidebar = styled.div`
   background-color: #eee;
   border: 10px solid #fff;
   z-index: 100;
+  @media(max-width:800px) {
+    display: none;
+  }
 `
 
 const MainContent = styled.div`
@@ -59,6 +62,10 @@ const MainContent = styled.div`
   padding-left: 320px;
   width: 100%;
   margin: 0 auto;
+  @media(max-width:800px) {
+    padding-left:10px;
+    padding-right: 10px;
+  }
 `
 
 const SidebarMenu = styled(MainMenu)`

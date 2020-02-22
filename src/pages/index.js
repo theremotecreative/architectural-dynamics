@@ -36,6 +36,9 @@ const HomeHeroSection = styled.div`
   position: relative;
   display: flex;
   flex-wrap: wrap;
+  @media(max-width:800px) {
+    width: 100%;
+  }
 `
 
 const HeroOne = styled.div`
