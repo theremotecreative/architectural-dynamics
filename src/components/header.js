@@ -22,7 +22,7 @@ class Header extends Component {
       headerName += ' mobileOpen';
     }
     return (
-      <header style={{ width: '100%', zIndex: '100', position: 'fixed', height: '156px', border: '10px solid #fff', backgroundColor: '#ddd', }} className={headerName}>
+      <header style={{ width: '100%', zIndex: '100', position: 'fixed', height: '110px', border: '10px solid #fff', backgroundColor: '#ddd', }} className={headerName}>
         <div style={{ margin: `0 auto`, padding: `0`, display: `flex`, justifyContent: `space-between`, alignItems: `center`, }} >
           <MainLogo></MainLogo>
           <HeaderSpace></HeaderSpace>
@@ -48,14 +48,14 @@ class Header extends Component {
 
 const HeaderSpace = styled.div`
   width: 38%;
-  height: 136px;
+  height: 90px;
   border-left: 10px solid #fff;
   background-color: #950000;
 `
 
 const HeaderContact = styled.div`
   width: 30%;
-  height: 136px;
+  height: 90px;
   border-left: 10px solid #fff;
   background-color: #8e8f99;
   display: flex;

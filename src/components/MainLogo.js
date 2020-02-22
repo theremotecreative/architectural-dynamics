@@ -32,10 +32,10 @@ const MainLogoLink = styled(Link)`
   background-color: #15151d;
   text-decoration: none;
   width: 32%;
-  height: 136px;
+  height: 90px;
   display: flex;
   align-items: center;
-  padding-left: 40px;
+  padding-left: 20px;
   @media(max-width:800px) {
     color: #fff;
   }

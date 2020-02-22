@@ -31,8 +31,8 @@ const IndexPage = () => (
 )
 
 const HomeHeroSection = styled.div`
-  height: calc( 100vh - 156px);
-  width: calc( 100vw - 370px );
+  height: calc( 100vh - 110px);
+  width: calc( 100vw - 320px );
   position: relative;
   display: flex;
   flex-wrap: wrap;
