@@ -45,9 +45,9 @@ Layout.propTypes = {
 
 const MainSidebar = styled.div`
   position: fixed;
-  top: 120px;
+  top: 100px;
   left: 0px;
-  height: calc(100vh - 120px);
+  height: calc(100vh - 110px);
   width: 320px;
   background-color: #eee;
   border: 10px solid #fff;
@@ -55,7 +55,7 @@ const MainSidebar = styled.div`
 `
 
 const MainContent = styled.div`
-  padding-top: 120px;
+  padding-top: 100px;
   padding-left: 320px;
   width: 100%;
   margin: 0 auto;

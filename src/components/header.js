@@ -63,12 +63,14 @@ const HeaderContact = styled.div`
   padding: 20px;
   align-items: center;
   h3 {
-    font-size: 20px;
+    font-family: montserrat;
+    font-size: 18px;
     margin-bottom: 0px;
     width: 100%;
   }
   p{
-    font-size: 16px;
+    font-family: roboto;
+    font-size: 14px;
     line-height: 1.2em;
     margin-bottom: 0px;
     width: 100%;

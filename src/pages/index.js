@@ -32,7 +32,7 @@ const IndexPage = () => (
 
 const HomeHeroSection = styled.div`
   height: calc( 100vh - 110px);
-  width: calc( 100vw - 320px );
+  width: calc( 100vw - 343px );
   position: relative;
   display: flex;
   flex-wrap: wrap;
