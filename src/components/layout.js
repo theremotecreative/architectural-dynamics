@@ -26,8 +26,9 @@ const Layout = ({ className, children }) => {
           <SidebarMenu></SidebarMenu>
         </FixedMenu>
         <PageInfo>
-          [page title]
-          [page description]
+          <h1>Home</h1>
+          <hr/>
+          <p>The PROCESS of architectural design and planning is a journey. "Let me walk that path with you."<br/>- James M. Vanderheyden</p>
         </PageInfo>
       </MainSidebar>
       <MainContent>
@@ -70,7 +71,7 @@ const FixedMenu = styled.div`
   border-bottom: 10px solid #fff;
   height: 230px;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
 `
 

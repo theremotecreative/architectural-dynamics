@@ -37,7 +37,7 @@ const MainLogoLink = styled(Link)`
   height: 136px;
   display: flex;
   align-items: center;
-  padding-left: 20px;
+  padding-left: 40px;
   @media(max-width:800px) {
     color: #fff;
   }
