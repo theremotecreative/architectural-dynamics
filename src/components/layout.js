@@ -48,7 +48,7 @@ const MainSidebar = styled.div`
   top: 146px;
   left: 0px;
   height: calc(100vh - 146px);
-  width: 350px;
+  width: 320px;
   background-color: #eee;
   border: 10px solid #fff;
   z-index: 100;
@@ -56,7 +56,7 @@ const MainSidebar = styled.div`
 
 const MainContent = styled.div`
   padding-top: 146px;
-  padding-left: 350px;
+  padding-left: 320px;
   width: 100%;
   margin: 0 auto;
 `
@@ -66,8 +66,8 @@ const SidebarMenu = styled(MainMenu)`
 `
 
 const FixedMenu = styled.div`
-  width: 330px;
-  background-color: #8e8f99;
+  width: 300px;
+  background-color: #fff;
   border-bottom: 10px solid #fff;
   height: 230px;
   display: flex;
@@ -77,10 +77,21 @@ const FixedMenu = styled.div`
 
 const PageInfo = styled.div`
   height: calc(100vh - 386px);
-  width: 330px;
-  background-color: #950000;
+  width: 300px;
+  background-color: #fff;
   padding: 20px;
   border-bottom: 10px solid #fff;
+  text-align: center;
+  h1 {
+    font-family: Montserrat;
+    font-size: 28px;
+    text-transform: uppercase;
+    color: #15151d;
+  }
+  p {
+    font-family: Roboto;
+    font-size: 16px;
+  }
 `
 
 export default Layout
