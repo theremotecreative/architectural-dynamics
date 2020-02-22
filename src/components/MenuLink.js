@@ -5,7 +5,6 @@ import styled from 'styled-components'
 const MenuLink = ({ to, key, children }) => (
   <li
     key={key}
-    style={{ margin: `0 10px` }} 
     className="mainMenuItem"
   >
     <CustomLink 

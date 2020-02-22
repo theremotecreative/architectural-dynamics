@@ -26,10 +26,17 @@
     font-weight: 700;
     letter-spacing: 2px;
     color: #fff;
-    font-family: 'Montserrat'
+    padding-bottom: 5px;
+    border-bottom: 1px solid #aaa;
+    margin-bottom: 5px;
+}
+
+.mainMenu li:last-child {
+    border-bottom: none;
 }
 
 .mainMenu a {
+    font-family: 'Montserrat';
     color: #fff;
 }
 
