@@ -51,19 +51,19 @@ const HomeHeroImg = styled(Img)`
     animation-name: slide-one;
     animation-duration: 26s;
     animation-iteration-count: infinite;
-    animation-delay: .5s;
+    animation-delay: 1s;
   }
   &:nth-child(2) {
     animation-name: slide-two;
     animation-duration: 26s;
     animation-iteration-count: infinite;
-    animation-delay: .5s;
+    animation-delay: 1s;
   }
   &:nth-child(3) {
     animation-name: slide-three;
     animation-duration: 26s;
     animation-iteration-count: infinite;
-    animation-delay: .5s;
+    animation-delay: 1s;
   }
 `
 

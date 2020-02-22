@@ -7,7 +7,7 @@ const MainLogo = () => {
 
   const data = useStaticQuery(graphql`
     query {
-      placeholderImage: file(relativePath: { eq: "Logo-Black.png" }) {
+      placeholderImage: file(relativePath: { eq: "Logo-White.png" }) {
         childImageSharp {
           fluid(maxWidth: 343) {
             ...GatsbyImageSharpFluid
@@ -31,6 +31,7 @@ const MainLogo = () => {
 
 const MainLogoLink = styled(Link)`
   color: #000;
+  background-color: #15151d;
   text-decoration: none;
   width: 32%;
   height: 136px;

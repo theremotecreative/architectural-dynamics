@@ -66,7 +66,7 @@ const SidebarMenu = styled(MainMenu)`
 
 const FixedMenu = styled.div`
   width: 330px;
-  background-color: #ccc;
+  background-color: #8e8f99;
   border-bottom: 10px solid #fff;
   height: 230px;
   display: flex;
@@ -77,7 +77,7 @@ const FixedMenu = styled.div`
 const PageInfo = styled.div`
   height: calc(100vh - 386px);
   width: 330px;
-  background-color: #999;
+  background-color: #950000;
   padding: 20px;
   border-bottom: 10px solid #fff;
 `

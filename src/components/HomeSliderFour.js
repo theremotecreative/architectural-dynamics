@@ -49,21 +49,21 @@ const HomeHeroImg = styled(Img)`
   opacity: 0;
   &:nth-child(1) {
     animation-name: slide-one;
-    animation-duration: 32s;
+    animation-duration: 26s;
     animation-iteration-count: infinite;
-    animation-delay: 1.5s;
+    animation-delay: 3s;
   }
   &:nth-child(2) {
     animation-name: slide-two;
-    animation-duration: 32s;
+    animation-duration: 26s;
     animation-iteration-count: infinite;
-    animation-delay: 1.5s;
+    animation-delay: 3s;
   }
   &:nth-child(3) {
     animation-name: slide-three;
-    animation-duration: 32s;
+    animation-duration: 26s;
     animation-iteration-count: infinite;
-    animation-delay: 1.5s;
+    animation-delay: 3s;
   }
 `
 

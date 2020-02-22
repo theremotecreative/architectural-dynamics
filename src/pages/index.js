@@ -43,7 +43,7 @@ const HeroOne = styled.div`
   height: 60%;
   border: 5px solid #fff;
   border-left: none;
-  background-color: #aaa;
+  background-color: #383a47;
   z-index: 10;
   position: relative;
   overflow: hidden;
@@ -53,7 +53,7 @@ const HeroTwo = styled.div`
   width: 30%;
   height: 60%;
   border: 5px solid #fff;
-  background-color: #bbb;
+  background-color: #950000;
   z-index: 10;
   position: relative;
   overflow: hidden;
@@ -65,7 +65,7 @@ const HeroThree = styled.div`
   border: 5px solid #fff;
   border-left: none;
   border-bottom: none;
-  background-color: #ccc;
+  background-color: #15151d;
   z-index: 10;
   position: relative;
   overflow: hidden;
@@ -76,7 +76,7 @@ const HeroFour = styled.div`
   height: 40%;
   border: 5px solid #fff;
   border-bottom: none;
-  background-color: #ddd;
+  background-color: #383a47;
   z-index: 10;
   position: relative;
   overflow: hidden;

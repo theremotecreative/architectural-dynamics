@@ -50,14 +50,14 @@ const HeaderSpace = styled.div`
   width: 38%;
   height: 136px;
   border-left: 10px solid #fff;
-  background-color: #ccc;
+  background-color: #950000;
 `
 
 const HeaderContact = styled.div`
   width: 30%;
   height: 136px;
   border-left: 10px solid #fff;
-  background-color: #aaa;
+  background-color: #8e8f99;
   display: flex;
   flex-wrap: wrap;
   padding: 20px;

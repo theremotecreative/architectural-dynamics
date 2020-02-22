@@ -49,13 +49,13 @@ const HomeHeroImg = styled(Img)`
   left: 0;
   opacity: 0;
   &:nth-child(1) {
-    animation: slide-one 30s ease-out infinite;
+    animation: slide-one 26s ease-out infinite;
   }
   &:nth-child(2) {
-    animation: slide-two 30s ease-out infinite;
+    animation: slide-two 26s ease-out infinite;
   }
   &:nth-child(3) {
-    animation: slide-three 30s ease-out infinite;
+    animation: slide-three 26s ease-out infinite;
   }
 `
 
