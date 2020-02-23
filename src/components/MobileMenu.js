@@ -16,10 +16,10 @@ export default () => (
       About
     </MenuLink>
     <MenuLink
-      key="blog"
-      to="/blog/"
+      key="testimonials"
+      to="/#/"
     >
-      Blog
+      Testimonials
     </MenuLink>
     <MenuLink
       key="contact"

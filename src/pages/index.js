@@ -42,7 +42,7 @@ const HomeHeroSection = styled.div`
 `
 
 const HeroOne = styled.div`
-  width: 70%;
+  width: 60%;
   height: 60%;
   border: 5px solid #fff;
   border-left: none;
@@ -53,13 +53,16 @@ const HeroOne = styled.div`
 `
 
 const HeroTwo = styled.div`
-  width: 30%;
+  width: 40%;
   height: 60%;
   border: 5px solid #fff;
   background-color: #950000;
   z-index: 10;
   position: relative;
   overflow: hidden;
+  @media(max-width:800px) {
+    border-right: none;
+  }
 `
 
 const HeroThree = styled.div`
@@ -83,6 +86,9 @@ const HeroFour = styled.div`
   z-index: 10;
   position: relative;
   overflow: hidden;
+  @media(max-width:800px) {
+    border-right: none;
+  }
 `
 
 export default IndexPage

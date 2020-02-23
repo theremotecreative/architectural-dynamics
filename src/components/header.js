@@ -22,7 +22,7 @@ class Header extends Component {
       headerName += ' mobileOpen';
     }
     return (
-      <header style={{ width: '100%', zIndex: '100', position: 'fixed', height: '110px', border: '10px solid #fff', backgroundColor: '#ddd', }} className={headerName}>
+      <header style={{ width: '100%', zIndex: '100', position: 'fixed', height: '110px', border: '10px solid #fff', }} className={headerName}>
         <div style={{ margin: `0 auto`, padding: `0`, display: `flex`, justifyContent: `space-between`, alignItems: `center`, }} >
           <MainLogo></MainLogo>
           <HeaderSpace></HeaderSpace>
@@ -51,6 +51,13 @@ const HeaderSpace = styled.div`
   height: 90px;
   border-left: 10px solid #fff;
   background-color: #950000;
+  transition-duration: .3s;
+  @media(max-width:1000px) {
+    width: 18%
+  }
+  @media(max-width:800px) {
+    display: none;
+  }
 `
 
 const HeaderContact = styled.div`
@@ -62,6 +69,7 @@ const HeaderContact = styled.div`
   flex-wrap: wrap;
   padding: 20px;
   align-items: center;
+  transition-duration: .3s;
   h3 {
     font-family: montserrat;
     font-size: 18px;
@@ -74,6 +82,12 @@ const HeaderContact = styled.div`
     line-height: 1.2em;
     margin-bottom: 0px;
     width: 100%;
+  }
+  @media(max-width:1000px) {
+    width: 42%;
+  }
+  @media(max-width:800px) {
+    display: none;
   }
 `
 

@@ -36,14 +36,26 @@ const MainLogoLink = styled(Link)`
   display: flex;
   align-items: center;
   padding-left: 20px;
+  padding-right: 20px;
+  transition-duration: .3s;
+  @media(max-width:1000px) {
+    width: 40%
+  }
   @media(max-width:800px) {
-    color: #fff;
+    width: 100%;
+    max-width: 380px;
+    border-right: 10px solid #fff;
+  }
+  @media(max-width:420px) {
+    padding-left: 10px;
+    padding-right: 10px;
   }
 `
 
 const LogoImg = styled(Img)`
-  height: 60px;
-  width: 245px;
+  height: auto;
+  max-width: 245px;
+  width: 100%;
 `
 
   export default MainLogo

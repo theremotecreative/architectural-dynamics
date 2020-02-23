@@ -7,7 +7,7 @@ export default () => (
       key="portfolio"
       to="/portfolio/"
     >
-      Portfolio
+      Projects
     </MenuLink>
     <MenuLink
       key="about"
@@ -16,10 +16,10 @@ export default () => (
       About
     </MenuLink>
     <MenuLink
-      key="blog"
-      to="/blog/"
+      key="testimonials"
+      to="/#/"
     >
-      Blog
+      Testimonials
     </MenuLink>
     <MenuLink
       key="contact"
