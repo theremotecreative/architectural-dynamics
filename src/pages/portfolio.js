@@ -107,7 +107,10 @@ const MasonryItem = styled.div`
     width: 100%;
     margin-bottom: 1.0875rem;
     ${TextPanel} {
-      max-height: 100px;
+      max-height: none;
+      height: auto;
+      padding-top: 10px;
+      padding-bottom: 10px;
       max-width: 240px;
       bottom: 1.0875rem;
       top: auto;
