@@ -17,7 +17,7 @@ const ProjectTemplate = ({ data }) => (
     <WideTemplate>
       <ProjectMain>
         <ProjectImage>
-          <Img sizes={data.wordpressWpProject.featured_media.localFile.childImageSharp.sizes} alt={data.wordpressWpProject.title} style={{ maxHeight: 450 }} />
+          <Img sizes={data.wordpressWpProject.featured_media.localFile.childImageSharp.sizes} alt={data.wordpressWpProject.title} style={{ maxHeight: '100%', height: '100%' }} />
         </ProjectImage>
         <ProjectCopy>
           <ProjectH3>Description</ProjectH3>
@@ -33,11 +33,14 @@ const ProjectTemplate = ({ data }) => (
 const ProjectMain = styled.div`
   display: flex;
   margin-bottom: 10px;
+  @media(max-width:1200px) {
+    flex-wrap: wrap;
+  }
 `
 
 const ProjectImage = styled.div`
   width: 55%;
-  @media(max-width:800px) {
+  @media(max-width:1200px) {
     width: 100%;
   }
 `
@@ -48,8 +51,10 @@ const ProjectCopy = styled.div`
     font-family: Roboto;
     font-size: 16px;
   }
-  @media(max-width:800px) {
+  @media(max-width:1200px) {
     width: 100%;
+    padding-left: 0;
+    padding-top: 10px;
   }
 `
 
