@@ -105,7 +105,7 @@ const MasonryItem = styled.div`
   }
   @media (max-width:800px) {
     width: 100%;
-    margin-bottom: 1.0875rem;
+    margin-bottom: 10px;
     ${TextPanel} {
       max-height: none;
       height: auto;

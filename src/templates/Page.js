@@ -3,7 +3,7 @@ import { graphql } from "gatsby"
 import styled from 'styled-components'
 import Img from "gatsby-image"
 import Layout from "../components/layout.js"
-import NarrowTemplate from "../components/NarrowTemplate"
+import WideTemplate from "../components/WideTemplate"
 import SEO from "../components/seo"
 
 const PageTemplate = ({ data }) => (
@@ -12,11 +12,11 @@ const PageTemplate = ({ data }) => (
       title={data.wordpressPage.title}
       description={data.wordpressPage.excerpt}
     />
-    <NarrowTemplate>
+    <WideTemplate>
     <PageTitle>{data.wordpressPage.title}</PageTitle>
     <Img sizes={data.wordpressPage.featured_media.localFile.childImageSharp.sizes} alt={data.wordpressPage.title} style={{ maxHeight: 450, marginBottom: '1.45rem' }} />
     <div dangerouslySetInnerHTML={{ __html: data.wordpressPage.content }} />
-    </NarrowTemplate>
+    </WideTemplate>
   </Layout>
 )
 
