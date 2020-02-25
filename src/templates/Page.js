@@ -7,7 +7,10 @@ import WideTemplate from "../components/WideTemplate"
 import SEO from "../components/seo"
 
 const PageTemplate = ({ data }) => (
-  <Layout>
+  <Layout
+    pageTitle={data.wordpressPage.title}
+    pageExcerpt={data.wordpressPage.excerpt}
+  >
     <SEO
       title={data.wordpressPage.title}
       description={data.wordpressPage.excerpt}

@@ -9,7 +9,10 @@ import { FaPhone } from 'react-icons/fa'
 import './contact.css'
 
 export default () => (
-    <Layout>
+    <Layout
+    pageTitle="Contact"
+    pageExcerpt='<p>The PROCESS of architectural design and planning is a journey. "Let me walk that path with you."<br/>- James M. Vanderheyden</p>'
+    >
     <SEO
       title="Contact"
       description="Contact Us to Learn More"
