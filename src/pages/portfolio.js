@@ -7,7 +7,11 @@ import WideTemplate from "../components/WideTemplate"
 import SEO from "../components/seo"
 
 const PortfolioPage = ({ data }) => (
-  <Layout className="portfolio-page">
+  <Layout 
+    pageTitle="Portfolio"
+    pageExcerpt='<p>The PROCESS of architectural design and planning is a journey. "Let me walk that path with you."<br/>- James M. Vanderheyden</p>'  
+    className="portfolio-page"
+  >
     <SEO title="Portfolio" keywords={[`Architecture`, `Grid`, `Portfolio`]} />
     <WideTemplate>
     <Masonry>
@@ -21,7 +25,7 @@ const PortfolioPage = ({ data }) => (
                   {post.node.title}
                 </TextTitle>
                 <TextLocation>
-                  {post.node.acf.project_location}
+                  {post.node.acf.project_loc}
                 </TextLocation>
               </TextCell>
             </TextPanel>
@@ -146,7 +150,7 @@ export const query = graphql`
           slug
           excerpt
           acf {
-            project_location
+            project_loc
           }
           featured_media {
             localFile {

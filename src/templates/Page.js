@@ -9,7 +9,7 @@ import SEO from "../components/seo"
 const PageTemplate = ({ data }) => (
   <Layout
     pageTitle={data.wordpressPage.title}
-    pageExcerpt={data.wordpressPage.excerpt}
+    pageExcerpt={data.wordpressPage.page_info}
   >
     <SEO
       title={data.wordpressPage.title}
@@ -35,6 +35,9 @@ export const query = graphql`
       title
       excerpt
       content
+      acf {
+        page_info
+      }
       featured_media {
         localFile {
           childImageSharp {

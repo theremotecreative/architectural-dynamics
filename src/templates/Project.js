@@ -11,20 +11,57 @@ import LightBox from '../components/LightBox'
 const ProjectTemplate = ({ data }) => (
   <Layout
     pageTitle={data.wordpressWpProject.title}
-    pageExcerpt={data.wordpressWpProject.excerpt}
+    pageExcerpt={data.wordpressWpProject.acf.project_information}
   >
     <SEO title={data.wordpressWpProject.title} description={data.wordpressWpProject.excerpt} />
     <WideTemplate>
-    <Title>{data.wordpressWpProject.title}</Title>
-    <Img sizes={data.wordpressWpProject.featured_media.localFile.childImageSharp.sizes} alt={data.wordpressWpProject.title} style={{ maxHeight: 450 }} />
-    <div style={{ marginTop: 20 }} dangerouslySetInnerHTML={{ __html: data.wordpressWpProject.content }} />
-    <LightBox images={data.wordpressWpProject.acf.project_gallery} />
+      <ProjectMain>
+        <ProjectImage>
+          <Img sizes={data.wordpressWpProject.featured_media.localFile.childImageSharp.sizes} alt={data.wordpressWpProject.title} style={{ maxHeight: 450 }} />
+        </ProjectImage>
+        <ProjectCopy>
+          <ProjectH3>Description</ProjectH3>
+          <div style={{marginLeft: '10px'}} dangerouslySetInnerHTML={{ __html: data.wordpressWpProject.content }} />
+        </ProjectCopy>
+      </ProjectMain>
+      <ProjectH3>Gallery</ProjectH3>
+      <LightBox images={data.wordpressWpProject.acf.project_gallery} />
     </WideTemplate>
   </Layout>
 )
 
-const Title = styled.h1`
-  color: #000;
+const ProjectMain = styled.div`
+  display: flex;
+  margin-bottom: 10px;
+`
+
+const ProjectImage = styled.div`
+  width: 55%;
+  @media(max-width:800px) {
+    width: 100%;
+  }
+`
+const ProjectCopy = styled.div`
+  width: 45%;
+  padding-left: 10px;
+  p {
+    font-family: Roboto;
+    font-size: 16px;
+  }
+  @media(max-width:800px) {
+    width: 100%;
+  }
+`
+
+const ProjectH3 = styled.h3` 
+  font-family: Montserrat;
+  font-size: 20px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: rgb(21,21,29);
+  margin-bottom: 10px;
+  padding: 10px 20px;
+  background-color: #f1f1f1;
 `
 
 ProjectTemplate.propTypes = {
@@ -44,6 +81,7 @@ export const query = graphql`
         slug
       }
       acf {
+        project_information
         project_gallery {
           title
           localFile {

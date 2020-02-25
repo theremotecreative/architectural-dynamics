@@ -108,7 +108,7 @@ const StyledImg = styled(Img)`
 
 const Gallery = styled.div`
   column-count: 1;
-  column-gap: 1em;
+  column-gap: 10px;
   transition-duration: .3s;
   @media (min-width: 500px) {
     column-count: 2;
@@ -142,7 +142,7 @@ const GalleryItem = styled.div`
   position: relative;
   background-color: #000;
   display: inline-block;
-  margin: 0 0 1em;
+  margin: 0 0 10px;
   width: 100%;
   transition-duration:.3s;
   &:hover {
