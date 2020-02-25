@@ -1,12 +1,15 @@
 import React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
+import PageTransition from 'gatsby-plugin-page-transitions'
 import MainMenu from "../components/MainMenu"
+import PageTitle from "../components/PageTitle"
+import PageExcerpt from "../components/PageExcerpt"
 import Header from "./header"
 import styled from 'styled-components'
 import "./layout.css"
 
-const Layout = ({ className, children }) => {
+const Layout = ({ pageTitle, pageExcerpt, className, children }) => {
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
@@ -25,11 +28,13 @@ const Layout = ({ className, children }) => {
         <FixedMenu>
           <SidebarMenu></SidebarMenu>
         </FixedMenu>
-        <PageInfo>
-          <h1>Home</h1>
-          <hr/>
-          <p>The PROCESS of architectural design and planning is a journey. "Let me walk that path with you."<br/>- James M. Vanderheyden</p>
-        </PageInfo>
+        <PageTransition>
+          <PageInfo>
+            <PageTitle pageTitle={pageTitle}></PageTitle>
+            <hr/>
+            <PageExcerpt pageExcerpt={pageExcerpt}></PageExcerpt>
+          </PageInfo>
+        </PageTransition>
       </MainSidebar>
       <MainContent>
         {children}
@@ -49,7 +54,7 @@ const MainSidebar = styled.div`
   left: 0px;
   height: calc(100vh - 110px);
   width: 320px;
-  background-color: #eee;
+  background-color: #fff;
   border: 10px solid #fff;
   z-index: 100;
   @media(max-width:800px) {
@@ -85,15 +90,15 @@ const FixedMenu = styled.div`
 const PageInfo = styled.div`
   height: calc(100vh - 350px);
   width: 300px;
-  background-color: #fff;
-  padding: 20px;
-  border-bottom: 10px solid #fff;
+  background-color: rgb(255, 255, 255);
   text-align: center;
+  padding: 20px;
+  border-bottom: 10px solid rgb(255, 255, 255);
   h1 {
     font-family: Montserrat;
     font-size: 28px;
     text-transform: uppercase;
-    color: #15151d;
+    color: rgb(21, 21, 29);
   }
   p {
     font-family: Roboto;

@@ -9,7 +9,11 @@ import HomeSliderThree from "../components/HomeSliderThree"
 import HomeSliderFour from "../components/HomeSliderFour"
 
 const IndexPage = () => (
-  <Layout className="fixed-header">
+  <Layout 
+  className="fixed-header"
+  pageTitle="Home"
+  pageExcerpt='<p>The PROCESS of architectural design and planning is a journey. "Let me walk that path with you."<br/>- James M. Vanderheyden</p>'
+  >
     <SEO title="Home" />
     <PageTransition>
     <HomeHeroSection>

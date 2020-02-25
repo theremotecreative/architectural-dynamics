@@ -9,7 +9,9 @@ import SEO from "../components/seo"
 import LightBox from '../components/LightBox'
 
 const ProjectTemplate = ({ data }) => (
-  <Layout>
+  <Layout
+    pageTitle={data.wordpressWpProject.title}
+  >
     <SEO title={data.wordpressWpProject.title} description={data.wordpressWpProject.excerpt} />
     <WideTemplate>
     <Title>{data.wordpressWpProject.title}</Title>
