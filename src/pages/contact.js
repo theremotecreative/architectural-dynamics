@@ -34,7 +34,7 @@ export default () => (
             </ContactCard>
           </ContactInfo>
           <ContactForm>
-            <h2>Send us a message</h2>
+            <h2>Send a message</h2>
             <form name="contact" method="POST" data-netlify="true">
               <p>
                 <label>Your Name: <input type="text" name="name" /></label>   
@@ -72,6 +72,8 @@ const ContactRight = styled.div`
     font-family: Montserrat;
     font-size: 20px;
     text-transform: uppercase;
+    background-color: #eee;
+    padding: 10px 20px;
   }
 `
 
@@ -83,12 +85,14 @@ const ContactImage = styled.div`
 const ContactInfo = styled.div`
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  flex-direction: column;
+  margin-left: 10px;
 `
 
 const ContactCard = styled.div`
   display: flex;
-  width: 33%;
+  width: 100%;
+  padding-left: 20px;
   h3 {
     font-family: Montserrat;
     font-size: 14px;
@@ -101,10 +105,12 @@ const ContactCard = styled.div`
 `
 
 const ContactForm = styled.div`
+  margin-left: 10px;
   label {
     display: flex;
     flex-wrap: wrap;
     font-family: Montserrat;
+    margin-left: 30px;
   }
   input[type="text"],
   input[type="email"],
@@ -114,6 +120,7 @@ const ContactForm = styled.div`
     padding: 5px;
     border: 1px solid #ccc;
     border-radius: 3px;
+    margin-left: 30px;
   }
   button[type="submit"] {
     font-family: Montserrat;
@@ -123,6 +130,7 @@ const ContactForm = styled.div`
     color: #fff;
     padding: 5px 30px;
     transition-duration: .3s;
+    margin-left: 30px;
     &:hover {
       cursor: pointer;
       background-color: #999;
