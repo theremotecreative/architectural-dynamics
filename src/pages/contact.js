@@ -1,44 +1,37 @@
 import React from "react"
 import Layout from "../components/layout.js"
 import WideTemplate from "../components/WideTemplate"
-import GoogleMap from "../components/GoogleMap"
 import SEO from "../components/seo"
-import { FaMapMarkerAlt } from 'react-icons/fa'
+import styled from 'styled-components'
 import { FaEnvelope } from 'react-icons/fa'
 import { FaPhone } from 'react-icons/fa'
 import './contact.css'
 
 export default () => (
     <Layout
-    pageTitle="Contact"
-    pageExcerpt='<p>The PROCESS of architectural design and planning is a journey. "Let me walk that path with you."<br/>- James M. Vanderheyden</p>'
+    pageTitle="Contact Me"
+    pageExcerpt='<p>I really want to hear from you! Please call, email, or complete this form and I will return your inquiry as soon as I can.</p>'
     >
     <SEO
       title="Contact"
-      description="Contact Us to Learn More"
+      description="Contact Me to Learn More"
       keywords={[`Architecture`, `Contact`, `Map`]}
     />
     <WideTemplate>
       <div className="contact-box">
         <div className="contact-left">
-          <div className="contact-map">
-            <GoogleMap />
-          </div>
+          <ContactImage></ContactImage>
         </div>
         <div className="contact-right">
-          <h1>Contact Us</h1>
+          <h1>Contact Me</h1>
           <div className="contact-info">
             <div className="contact-card">
-              <FaMapMarkerAlt />
-              <h3>123 Address St.<br/>City, St 12345</h3>
-            </div>
-            <div className="contact-card">
               <FaEnvelope />
-              <h3>demo@email.com</h3>
+              <h3>jmvanderheyden@yahoo.com</h3>
             </div>
             <div className="contact-card">
               <FaPhone />
-              <h3>(123) 456-7890</h3>
+              <h3>(708) 278-2891</h3>
             </div>
           </div>
           <div className="contact-form">
@@ -63,3 +56,9 @@ export default () => (
     </WideTemplate>
   </Layout>
 )
+
+const ContactImage = styled.div`
+  height: 100%;
+  width: 100%;
+  background-color: #eee;
+`

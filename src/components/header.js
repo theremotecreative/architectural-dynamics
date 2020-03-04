@@ -86,8 +86,9 @@ const HeaderContact = styled.div`
   }
   a {
     color: rgba(0,0,0,.6);
+    text-decoration: none;
     &:hover {
-      rgba(0,0,0,1);
+      color: rgba(0,0,0,1);
     }
   }
   @media(max-width:1000px) {
