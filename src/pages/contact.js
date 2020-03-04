@@ -2,6 +2,7 @@ import React from "react"
 import Layout from "../components/layout.js"
 import WideTemplate from "../components/WideTemplate"
 import SEO from "../components/seo"
+import HomeSliderOne from "../components/HomeSliderOne"
 import styled from 'styled-components'
 import { FaEnvelope } from 'react-icons/fa'
 import { FaPhone } from 'react-icons/fa'
@@ -19,7 +20,9 @@ export default () => (
     <WideTemplate>
       <ContactBox>
         <ContactLeft>
-          <ContactImage></ContactImage>
+          <ContactImage>
+            <HomeSliderOne></HomeSliderOne>
+          </ContactImage>
         </ContactLeft>
         <ContactRight>
           <ContactInfo>
@@ -81,6 +84,8 @@ const ContactImage = styled.div`
   height: 100%;
   width: 100%;
   background-color: #eee;
+  position: relative;
+  overflow: hidden;
 `
 const ContactInfo = styled.div`
   display: flex;
@@ -91,15 +96,18 @@ const ContactInfo = styled.div`
 
 const ContactCard = styled.div`
   display: flex;
+  align-items: center;
   width: 100%;
   padding-left: 20px;
+  margin-bottom: 20px;
   h3 {
     font-family: Montserrat;
     font-size: 14px;
     text-transform: uppercase;
+    margin-bottom: 0;
   }
   svg {
-    top: 3px;
+    margin-right: 10px;
     position: relative;
   }
 `
@@ -110,7 +118,7 @@ const ContactForm = styled.div`
     display: flex;
     flex-wrap: wrap;
     font-family: Montserrat;
-    margin-left: 30px;
+    margin-left: 20px;
   }
   input[type="text"],
   input[type="email"],
@@ -120,7 +128,6 @@ const ContactForm = styled.div`
     padding: 5px;
     border: 1px solid #ccc;
     border-radius: 3px;
-    margin-left: 30px;
   }
   button[type="submit"] {
     font-family: Montserrat;
@@ -130,7 +137,7 @@ const ContactForm = styled.div`
     color: #fff;
     padding: 5px 30px;
     transition-duration: .3s;
-    margin-left: 30px;
+    margin-left: 20px;
     &:hover {
       cursor: pointer;
       background-color: #999;
