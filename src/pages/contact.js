@@ -2,7 +2,7 @@ import React from "react"
 import Layout from "../components/layout.js"
 import WideTemplate from "../components/WideTemplate"
 import SEO from "../components/seo"
-import HomeSliderOne from "../components/HomeSliderOne"
+import ContactSlider from "../components/ContactSlider"
 import styled from 'styled-components'
 import { FaEnvelope } from 'react-icons/fa'
 import { FaPhone } from 'react-icons/fa'
@@ -21,7 +21,7 @@ export default () => (
       <ContactBox>
         <ContactLeft>
           <ContactImage>
-            <HomeSliderOne></HomeSliderOne>
+            <ContactSlider></ContactSlider>
           </ContactImage>
         </ContactLeft>
         <ContactRight>
