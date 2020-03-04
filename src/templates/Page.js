@@ -16,16 +16,11 @@ const PageTemplate = ({ data }) => (
       description={data.wordpressPage.excerpt}
     />
     <WideTemplate>
-    <PageTitle>{data.wordpressPage.title}</PageTitle>
     <Img sizes={data.wordpressPage.featured_media.localFile.childImageSharp.sizes} alt={data.wordpressPage.title} style={{ maxHeight: 450, marginBottom: '1.45rem' }} />
     <div dangerouslySetInnerHTML={{ __html: data.wordpressPage.content }} />
     </WideTemplate>
   </Layout>
 )
-
-const PageTitle = styled.h1`
-  color: #000;
-`
 
 export default PageTemplate
 

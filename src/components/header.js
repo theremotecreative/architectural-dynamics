@@ -29,7 +29,7 @@ class Header extends Component {
           <HeaderContact>
             <div>
             <h3>James M. Vanderheyden</h3>
-            <p>info@architecturaldynamics.net<br/>1.708.278.2891</p>
+            <p><a href="mailto:jmvanderheyden@yahoo.com">jmvanderheyden@yahoo.com</a><br/><a href="tel:+17082782891">(708) 278-2891</a></p>
             </div>
           </HeaderContact>
           <button onClick={() => this.toggleMenu()} className="mobileIcon">
@@ -79,9 +79,16 @@ const HeaderContact = styled.div`
   p{
     font-family: roboto;
     font-size: 14px;
-    line-height: 1.2em;
+    line-height: 1.3em;
+    margin-top: 3px;
     margin-bottom: 0px;
     width: 100%;
+  }
+  a {
+    color: rgba(0,0,0,.6);
+    &:hover {
+      rgba(0,0,0,1);
+    }
   }
   @media(max-width:1000px) {
     width: 42%;

@@ -4,6 +4,12 @@ import MenuLink from "./MenuLink"
 export default () => (
   <ul className="mobileMenu">
     <MenuLink
+      key="home"
+      to="/"
+    >
+      Home
+    </MenuLink>
+    <MenuLink
       key="portfolio"
       to="/portfolio/"
     >
