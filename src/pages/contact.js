@@ -5,7 +5,6 @@ import SEO from "../components/seo"
 import styled from 'styled-components'
 import { FaEnvelope } from 'react-icons/fa'
 import { FaPhone } from 'react-icons/fa'
-import './contact.css'
 
 export default () => (
     <Layout
@@ -18,23 +17,23 @@ export default () => (
       keywords={[`Architecture`, `Contact`, `Map`]}
     />
     <WideTemplate>
-      <div className="contact-box">
-        <div className="contact-left">
+      <ContactBox>
+        <ContactLeft>
           <ContactImage></ContactImage>
-        </div>
-        <div className="contact-right">
-          <h1>Contact Me</h1>
-          <div className="contact-info">
-            <div className="contact-card">
+        </ContactLeft>
+        <ContactRight>
+          <ContactInfo>
+          <h2>Call or Email</h2>
+            <ContactCard>
               <FaEnvelope />
               <h3>jmvanderheyden@yahoo.com</h3>
-            </div>
-            <div className="contact-card">
+            </ContactCard>
+            <ContactCard>
               <FaPhone />
               <h3>(708) 278-2891</h3>
-            </div>
-          </div>
-          <div className="contact-form">
+            </ContactCard>
+          </ContactInfo>
+          <ContactForm>
             <h2>Send us a message</h2>
             <form name="contact" method="POST" data-netlify="true">
               <p>
@@ -50,15 +49,84 @@ export default () => (
                 <button type="submit">Submit</button>
               </p>
             </form>
-          </div>
-        </div>
-      </div>
+          </ContactForm>
+        </ContactRight>
+      </ContactBox>
     </WideTemplate>
   </Layout>
 )
+
+const ContactBox = styled.div`
+  display: flex;
+  margin-bottom: 10px;
+  height: calc(100vh - 130px);
+`
+
+const ContactLeft = styled.div`
+  width: 50%;
+`
+
+const ContactRight = styled.div`
+  width: 50%;
+  h2 {
+    font-family: Montserrat;
+    font-size: 20px;
+    text-transform: uppercase;
+  }
+`
 
 const ContactImage = styled.div`
   height: 100%;
   width: 100%;
   background-color: #eee;
+`
+const ContactInfo = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+`
+
+const ContactCard = styled.div`
+  display: flex;
+  width: 33%;
+  h3 {
+    font-family: Montserrat;
+    font-size: 14px;
+    text-transform: uppercase;
+  }
+  svg {
+    top: 3px;
+    position: relative;
+  }
+`
+
+const ContactForm = styled.div`
+  label {
+    display: flex;
+    flex-wrap: wrap;
+    font-family: Montserrat;
+  }
+  input[type="text"],
+  input[type="email"],
+  textarea {
+    width: 100%;
+    margin-top: 3px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+  }
+  button[type="submit"] {
+    font-family: Montserrat;
+    background-color: #aaa;
+    border: 1px solid #aaa;
+    border-radius: 4px;
+    color: #fff;
+    padding: 5px 30px;
+    transition-duration: .3s;
+    &:hover {
+      cursor: pointer;
+      background-color: #999;
+      border-color: #999;
+    }
+  }
 `
