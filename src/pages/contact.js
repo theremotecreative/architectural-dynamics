@@ -61,12 +61,21 @@ export default () => (
 
 const ContactBox = styled.div`
   display: flex;
+  flex-wrap: wrap;
   margin-bottom: 10px;
   height: calc(100vh - 130px);
+  @media(max-width:1200px) {
+    height: auto;
+  }
 `
 
 const ContactLeft = styled.div`
   width: 50%;
+  @media(max-width:1200px) {
+    width: 100%;
+    height: 50vh;
+    margin-bottom: 10px;
+  }
 `
 
 const ContactRight = styled.div`
@@ -77,6 +86,9 @@ const ContactRight = styled.div`
     text-transform: uppercase;
     background-color: #eee;
     padding: 10px 20px;
+  }
+  @media(max-width:1200px) {
+    width: 100%;
   }
 `
 
@@ -92,6 +104,9 @@ const ContactInfo = styled.div`
   flex-wrap: wrap;
   flex-direction: column;
   margin-left: 10px;
+  @media(max-width:1200px) {
+    margin-left: 0;
+  }
 `
 
 const ContactCard = styled.div`
@@ -103,7 +118,6 @@ const ContactCard = styled.div`
   h3 {
     font-family: Montserrat;
     font-size: 14px;
-    text-transform: uppercase;
     margin-bottom: 0;
   }
   svg {
@@ -119,6 +133,9 @@ const ContactForm = styled.div`
     flex-wrap: wrap;
     font-family: Montserrat;
     margin-left: 20px;
+    @media(max-width:800px) {
+      margin-left: 0;
+    }
   }
   input[type="text"],
   input[type="email"],
@@ -143,5 +160,11 @@ const ContactForm = styled.div`
       background-color: #999;
       border-color: #999;
     }
+    @media(max-width:800px) {
+      margin-left: 0;
+    }
+  }
+  @media(max-width:1200px) {
+    margin-left: 0;
   }
 `

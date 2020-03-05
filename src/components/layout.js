@@ -58,7 +58,12 @@ const MainSidebar = styled.div`
   border: 10px solid #fff;
   z-index: 100;
   @media(max-width:800px) {
-    display: none;
+    display: block;
+    position: relative;
+    height: auto;
+    width: 100%;
+    z-index: 0;
+    background-color: #f9f9f9;
   }
 `
 
@@ -85,6 +90,9 @@ const FixedMenu = styled.div`
   display: flex;
   justify-content: flex-start;
   align-items: center;
+  @media(max-width:800px) {
+    display: none;
+  }
 `
 
 const PageInfo = styled.div`
@@ -103,6 +111,25 @@ const PageInfo = styled.div`
   p {
     font-family: Roboto;
     font-size: 16px;
+  }
+  @media(max-width:800px) {
+    height: auto;
+    width: 100%;
+    background-color: transparent;
+    margin-bottom: 0;
+    border-bottom: 0;
+  }
+  h1 {
+    max-width: 400px;
+    margin: 0 auto 20px;
+  }
+  hr {
+    max-width: 80px;
+    margin: 20px auto;
+  }
+  p {
+    max-width: 400px;
+    margin: 0 auto;
   }
 `
 

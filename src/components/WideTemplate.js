@@ -22,6 +22,7 @@ const WideLayout = styled.div`
   border: 10px solid #fff;
   border-left: none;
   @media(max-width: 800px) {
+    border-top: none;
     border-right: none;
   }
 `
