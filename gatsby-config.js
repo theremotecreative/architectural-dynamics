@@ -69,6 +69,7 @@ module.exports = {
           "**/pages",
           "**/project", // <== Custom post slug
           "**/home_slide", // <== Custom post slug
+          "**/testimonial", // <== Custom post slug
           "**/media",
           "**/tags",
           "**/taxonomies",

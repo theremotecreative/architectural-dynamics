@@ -23,7 +23,7 @@ export default () => (
     </MenuLink>
     <MenuLink
       key="testimonials"
-      to="/#/"
+      to="/testimonials/"
     >
       Testimonials
     </MenuLink>
