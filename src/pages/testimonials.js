@@ -22,6 +22,7 @@ pageExcerpt='<p>The PROCESS of architectural design and planning is a journey. "
                         <TestInfo>
                             {post.node.acf.testimonial_info}
                         </TestInfo>
+                        <hr/>
                     </TestContent>
                 ))} 
             </TestimonialSection>
@@ -34,17 +35,31 @@ pageExcerpt='<p>The PROCESS of architectural design and planning is a journey. "
 
 const TestimonialSection = styled.div`
     background-color: #f9f9f9;
+    margin-bottom: 10px;
 `
 
 const TestContent = styled.div`
     padding: 50px;
     text-align: center;
+    hr {
+        max-width: 200px;
+        margin: 20px auto;
+        @media(max-width:500) {
+            max-width: 80px;
+        }
+    }
+    @media(max-width:500px) {
+        padding: 50px 20px;
+    }
 `
 
 const TestCopy = styled.div`
     p {
         font-family: Roboto;
         font-size: 16px;
+        max-width: 700px;
+        margin: 0 auto;
+        margin-bottom: 20px;
     }
 `
 
