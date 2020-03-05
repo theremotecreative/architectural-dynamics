@@ -18,9 +18,7 @@ pageExcerpt='<p>The PROCESS of architectural design and planning is a journey. "
                 {data.allWordpressWpTestimonial.edges.map(post => (
                     <TestContent>
                         <TestCopy dangerouslySetInnerHTML={{ __html: post.node.content }} />
-                        <TestAuthor>
-                            {post.node.title}
-                        </TestAuthor>
+                        <TestAuthor dangerouslySetInnerHTML={{ __html: post.node.title }} />
                         <TestInfo>
                             {post.node.acf.testimonial_info}
                         </TestInfo>
@@ -35,16 +33,41 @@ pageExcerpt='<p>The PROCESS of architectural design and planning is a journey. "
 
 
 const TestimonialSection = styled.div`
+    background-color: #f9f9f9;
 `
 
 const TestContent = styled.div`
+    padding: 50px;
+    text-align: center;
 `
 
-const TestCopy = styled.div``
+const TestCopy = styled.div`
+    p {
+        font-family: Roboto;
+        font-size: 16px;
+    }
+`
 
-const TestAuthor = styled.h3``
+const TestAuthor = styled.h3`
+    font-family: Montserrat;
+    color: #15151d;
+    margin: 5px 0;
+    font-size: 20px;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 2px;
+    padding-bottom: 5px;
+`
 
-const TestInfo = styled.p``
+const TestInfo = styled.p`
+    font-family: Montserrat;
+    color: #59595c;
+    margin: 5px 0;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    padding-bottom: 5px;
+`
 
 export default TestimonialPage
 
