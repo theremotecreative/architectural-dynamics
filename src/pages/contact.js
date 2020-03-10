@@ -38,7 +38,10 @@ export default () => (
           </ContactInfo>
           <ContactForm>
             <h2>Send a message</h2>
-            <form name="contact" method="POST" data-netlify="true">
+            <form name="contact" method="POST" netlify-honeypot="bot-field" data-netlify="true">
+              <p class="hidden">
+                <label>Don’t fill this out if you're human: <input name="bot-field" /></label>
+              </p>
               <p>
                 <label>Your Name: <input type="text" name="name" /></label>   
               </p>
@@ -128,6 +131,9 @@ const ContactCard = styled.div`
 
 const ContactForm = styled.div`
   margin-left: 10px;
+  .hidden {
+    display: none;
+  }
   label {
     display: flex;
     flex-wrap: wrap;
