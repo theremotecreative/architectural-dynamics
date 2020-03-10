@@ -38,7 +38,7 @@ export default () => (
           </ContactInfo>
           <ContactForm>
             <h2>Send a message</h2>
-            <form name="contact" method="POST" netlify-honeypot="bot-field" data-netlify="true" action="/pages/success">
+            <form name="contact" method="POST" netlify-honeypot="bot-field" data-netlify="true" action="/success">
               <p class="hidden">
                 <label>Don’t fill this out if you're human: <input name="bot-field" /></label>
               </p>
