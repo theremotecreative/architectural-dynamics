@@ -38,23 +38,7 @@ export default () => (
           </ContactInfo>
           <ContactForm>
             <h2>Send a message</h2>
-            <form name="contact" method="POST" netlify-honeypot="bot-field" data-netlify="true" action="/pages/success">
-              <p class="hidden">
-                <label>Don’t fill this out if you're human: <input name="bot-field" /></label>
-              </p>
-              <p>
-                <label>Your Name: <input type="text" name="name" /></label>   
-              </p>
-              <p>
-                <label>Your Email: <input type="email" name="email" /></label>
-              </p>
-              <p>
-                <label>Message: <textarea name="message"></textarea></label>
-              </p>
-              <p>
-                <button type="submit">Submit</button>
-              </p>
-            </form>
+              <p>Thank you for your submmission. I'll get in touch with you soon.</p>
           </ContactForm>
         </ContactRight>
       </ContactBox>
@@ -131,44 +115,9 @@ const ContactCard = styled.div`
 
 const ContactForm = styled.div`
   margin-left: 10px;
-  .hidden {
-    display: none;
-  }
-  label {
-    display: flex;
-    flex-wrap: wrap;
-    font-family: Montserrat;
-    margin-left: 20px;
-    @media(max-width:800px) {
-      margin-left: 0;
-    }
-  }
-  input[type="text"],
-  input[type="email"],
-  textarea {
-    width: 100%;
-    margin-top: 3px;
-    padding: 5px;
-    border: 1px solid #ccc;
-    border-radius: 3px;
-  }
-  button[type="submit"] {
-    font-family: Montserrat;
-    background-color: #aaa;
-    border: 1px solid #aaa;
-    border-radius: 4px;
-    color: #fff;
-    padding: 5px 30px;
-    transition-duration: .3s;
-    margin-left: 20px;
-    &:hover {
-      cursor: pointer;
-      background-color: #999;
-      border-color: #999;
-    }
-    @media(max-width:800px) {
-      margin-left: 0;
-    }
+  p {
+    font-family: Roboto;
+    font-size: 20px;
   }
   @media(max-width:1200px) {
     margin-left: 0;
