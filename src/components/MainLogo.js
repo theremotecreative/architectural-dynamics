@@ -10,7 +10,7 @@ const MainLogo = () => {
       placeholderImage: file(relativePath: { eq: "logo-white-60px.png" }) {
         childImageSharp {
           fluid(maxWidth: 245) {
-            ...GatsbyImageSharpFluid
+            ...GatsbyImageSharpFluid_noBase64
           }
         }
       }
