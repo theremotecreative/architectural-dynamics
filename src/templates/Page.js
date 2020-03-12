@@ -1,6 +1,7 @@
 import React from "react"
 import { graphql } from "gatsby"
 import Img from "gatsby-image"
+import styled from 'styled-components'
 import Layout from "../components/layout.js"
 import WideTemplate from "../components/WideTemplate"
 import SEO from "../components/seo"
@@ -16,10 +17,16 @@ const PageTemplate = ({ data }) => (
     />
     <WideTemplate>
     <Img sizes={data.wordpressPage.featured_media.localFile.childImageSharp.sizes} alt={data.wordpressPage.title} style={{ maxHeight: 450, marginBottom: '1.45rem' }} />
-    <div dangerouslySetInnerHTML={{ __html: data.wordpressPage.content }} />
+    <PageContent dangerouslySetInnerHTML={{ __html: data.wordpressPage.content }} />
     </WideTemplate>
   </Layout>
 )
+
+const PageContent = styled.div`
+  p {
+    font-family: Roboto, Arial;
+  }
+`
 
 export default PageTemplate
 

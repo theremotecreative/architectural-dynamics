@@ -71,6 +71,7 @@ const TextCell = styled.div`
 `
 
 const TextTitle = styled.h3`
+  font-family: Montserrat, Open Sans;
   color: #fff;
   text-align: center;
   margin-bottom: 5px;
@@ -79,7 +80,7 @@ const TextTitle = styled.h3`
 const TextLocation = styled.p`
   color: #fff;
   text-align: center;
-  font-family: montserrat;
+  font-family: Montserrat, Open Sans;
   font-size: 14px;
   font-weight: 500;
   letter-spacing: 2px;

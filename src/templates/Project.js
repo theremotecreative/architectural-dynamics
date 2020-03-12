@@ -48,7 +48,7 @@ const ProjectCopy = styled.div`
   width: 45%;
   padding-left: 10px;
   p {
-    font-family: Roboto;
+    font-family: Roboto, Arial;
     font-size: 16px;
   }
   @media(max-width:1200px) {
@@ -59,7 +59,7 @@ const ProjectCopy = styled.div`
 `
 
 const ProjectH3 = styled.h3` 
-  font-family: Montserrat;
+  font-family: Montserrat, Open Sans;
   font-size: 20px;
   letter-spacing: 3px;
   text-transform: uppercase;
