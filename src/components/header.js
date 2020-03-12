@@ -71,13 +71,13 @@ const HeaderContact = styled.div`
   align-items: center;
   transition-duration: .3s;
   h3 {
-    font-family: montserrat;
+    font-family: Montserrat, Open Sans;
     font-size: 18px;
     margin-bottom: 0px;
     width: 100%;
   }
   p{
-    font-family: roboto;
+    font-family: Roboto Condensed, Arial;
     font-size: 14px;
     line-height: 1.3em;
     margin-top: 3px;

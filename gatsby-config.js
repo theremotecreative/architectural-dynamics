@@ -38,6 +38,7 @@ module.exports = {
       resolve: `gatsby-plugin-google-fonts`,
       options: {
         fonts: [
+          `roboto`,
           `roboto condensed`,
           `montserrat\:400,700` // you can also specify font weights and styles
         ],

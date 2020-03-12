@@ -68,7 +68,7 @@ const ContactLeft = styled.div`
 const ContactRight = styled.div`
   width: 50%;
   h2 {
-    font-family: Montserrat;
+    font-family: Montserrat, Open Sans;
     font-size: 20px;
     text-transform: uppercase;
     background-color: #eee;
@@ -103,7 +103,7 @@ const ContactCard = styled.div`
   padding-left: 20px;
   margin-bottom: 20px;
   h3 {
-    font-family: Montserrat;
+    font-family: Montserrat, Open Sans;
     font-size: 14px;
     margin-bottom: 0;
   }

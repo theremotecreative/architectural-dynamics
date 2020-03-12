@@ -103,13 +103,13 @@ const PageInfo = styled.div`
   padding: 20px;
   border-bottom: 10px solid rgb(255, 255, 255);
   h1 {
-    font-family: Montserrat;
+    font-family: Montserrat, Open Sans;
     font-size: 28px;
     text-transform: uppercase;
     color: rgb(21, 21, 29);
   }
   p {
-    font-family: Roboto;
+    font-family: Roboto Condensed, Arial;
     font-size: 16px;
   }
   @media(max-width:800px) {

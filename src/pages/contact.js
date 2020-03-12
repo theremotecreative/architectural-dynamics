@@ -84,7 +84,7 @@ const ContactLeft = styled.div`
 const ContactRight = styled.div`
   width: 50%;
   h2 {
-    font-family: Montserrat;
+    font-family: Montserrat, Open Sans;
     font-size: 20px;
     text-transform: uppercase;
     background-color: #eee;
@@ -119,7 +119,7 @@ const ContactCard = styled.div`
   padding-left: 20px;
   margin-bottom: 20px;
   h3 {
-    font-family: Montserrat;
+    font-family: Montserrat, Open Sans;
     font-size: 14px;
     margin-bottom: 0;
   }
@@ -137,7 +137,7 @@ const ContactForm = styled.div`
   label {
     display: flex;
     flex-wrap: wrap;
-    font-family: Montserrat;
+    font-family: Montserrat, Open Sans;
     margin-left: 20px;
     @media(max-width:800px) {
       margin-left: 0;
@@ -153,7 +153,7 @@ const ContactForm = styled.div`
     border-radius: 3px;
   }
   button[type="submit"] {
-    font-family: Montserrat;
+    font-family: Montserrat, Open Sans;
     background-color: #aaa;
     border: 1px solid #aaa;
     border-radius: 4px;

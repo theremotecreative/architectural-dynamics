@@ -34,7 +34,7 @@
 }
 
 .mainMenu a {
-    font-family: 'Montserrat';
+    font-family: 'Montserrat', Open Sans;
     color: rgb(21, 21, 29);
 }
 
@@ -126,7 +126,7 @@
 }
 
 .mobileMenu a {
-    font-family: 'Montserrat';
+    font-family: 'Montserrat', Open Sans;
     color: rgb(21, 21, 29);
 }
 

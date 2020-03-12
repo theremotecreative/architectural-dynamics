@@ -55,7 +55,7 @@ const TestContent = styled.div`
 
 const TestCopy = styled.div`
     p {
-        font-family: Roboto;
+        font-family: Roboto, Arial;
         font-size: 16px;
         max-width: 700px;
         margin: 0 auto;
@@ -64,7 +64,7 @@ const TestCopy = styled.div`
 `
 
 const TestAuthor = styled.h3`
-    font-family: Montserrat;
+    font-family: Montserrat, Open Sans;
     color: #15151d;
     margin: 5px 0;
     font-size: 20px;
@@ -75,7 +75,7 @@ const TestAuthor = styled.h3`
 `
 
 const TestInfo = styled.p`
-    font-family: Montserrat;
+    font-family: Montserrat, Open Sans;
     color: #59595c;
     margin: 5px 0;
     font-size: 14px;
