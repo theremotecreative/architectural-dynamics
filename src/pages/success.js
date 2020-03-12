@@ -116,8 +116,9 @@ const ContactCard = styled.div`
 const ContactForm = styled.div`
   margin-left: 10px;
   p {
-    font-family: Roboto;
+    font-family: Roboto, Arial;
     font-size: 20px;
+    padding-left: 20px;
   }
   @media(max-width:1200px) {
     margin-left: 0;
